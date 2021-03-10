@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import TeamDetail from './components/TeamDetail/TeamDetail';
+import Footer from './components/Footer/Footer';
 function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
           <h1>404!!</h1>
         </Route>
       </Switch>
+      <Footer/>
     </Router>
   );
 }
