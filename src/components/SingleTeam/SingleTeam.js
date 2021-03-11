@@ -12,7 +12,7 @@ const SingleTeam = (props) => {
                 <Card.Img variant="top" src={strTeamBadge} />
                 <Card.Body>
                     <Card.Title>{strTeam}</Card.Title>
-                    <Button onClick={() =>history.push(`/team/${idTeam}`)} variant="primary">Show Details</Button>
+                    <Button onClick={() =>history.push(`/team/${idTeam}`)} variant="primary">Show Details➡</Button>
                 </Card.Body>
             </Card>
 
