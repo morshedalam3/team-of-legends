@@ -1,12 +1,12 @@
 
 .team-logo > img{
-height: 400px;
-margin-top: 170px;
-}
-.link-button{
-    text-align: center;
-    margin-bottom: 30px;
-}
-.link-button > a > img {
-    height: 80px;
-}
+    height: 400px;
+    margin-top: 170px;
+    }
+    .link-button{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .link-button > a > img {
+        height: 80px;  
+    }

@@ -1,21 +1,20 @@
 import React from 'react';
-import './TeamDetail.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFlag, faMars, faMapMarker, faFutbol } from '@fortawesome/free-solid-svg-icons'
+import './TeamDetail.css';
+import { faFacebook, faTwitterSquare, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFlag, faMars, faMapMarker, faFutbol } from '@fortawesome/free-solid-svg-icons';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router';
 import male from '../../Photo/male.png';
 import female from '../../Photo/female.png';
-import fbIcon from './Facebook.png';
-import twIcon from './Twitter.png';
-import ytIcon from './YouTube.png';
 
 const TeamDetail = () => {
     const { id } = useParams();
     const [detail, setDetail] = useState([]);
     const { strTeam, intFormedYear, strGender, strCountry, 
-        strSport, strTeamBadge, strStadiumDescription, strTwitter, strFacebook, strYoutube, strTeamFanart4 } = detail;
+           strSport, strTeamBadge, strStadiumDescription,
+           strTwitter, strFacebook, strYoutube, strTeamFanart4 } = detail;
 
     let greetings;
     strGender === 'Male' ?
@@ -63,14 +62,14 @@ const TeamDetail = () => {
                             </div>  
                         </div>
                            <div>
-                               <h1 className="text-center mt-5">Description</h1>
+                            <h1 className="text-center mt-5">Description</h1>
                             <p className="my-5">{strStadiumDescription}</p>
                             </div>
 
                         <div className="link-button">
-                            <a href={`https://${strFacebook}`}><img src={fbIcon} alt=""/> </a>
-                            <a href={`https://${strTwitter}`}><img src={twIcon} alt=""/> </a>
-                            <a href={`https://${strYoutube}`}><img src={ytIcon} alt=""/> </a>
+                            <a href={`https://${strFacebook}`}> <FontAwesomeIcon icon={faFacebook} size="3x" /></a> 
+                            <a className="p-3" href={`https://${strTwitter}`}><FontAwesomeIcon icon={faTwitterSquare} size="3x" /> </a>
+                            <a href={`https://${strYoutube}`}><FontAwesomeIcon icon={faYoutube} size="3x" /> </a>
                         </div>
                     </div>
             </div>

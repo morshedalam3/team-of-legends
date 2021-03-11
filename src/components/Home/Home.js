@@ -23,7 +23,7 @@ const Home = () => {
     return ( 
          <>
             <div style={background}>
-                <h1 className="heading">World Sports Lover </h1>
+                <h1 className="heading">Team of legends </h1>
            </div>
     
         <div className="container bg-dark ">
