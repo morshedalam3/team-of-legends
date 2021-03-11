@@ -15,7 +15,7 @@ const TeamDetail = () => {
     const { id } = useParams();
     const [detail, setDetail] = useState([]);
     const { strTeam, intFormedYear, strGender, strCountry, 
-        strSport, strTeamBadge, strStadiumDescription, strTeamFanart4 } = detail;
+        strSport, strTeamBadge, strStadiumDescription, strTwitter, strFacebook, strYoutube, strTeamFanart4 } = detail;
 
     let greetings;
     strGender === 'Male' ?
@@ -37,7 +37,7 @@ const TeamDetail = () => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-    }
+    };
 
     return (
         <>
@@ -49,15 +49,13 @@ const TeamDetail = () => {
 
             <div className="team-box">
                     <div className="container bg-success">
-                        <div className="row team-info">
-                            <div className="col-md-6">
-                                <div className="mt-5">
+                        <div className="row bg-primary mt-5">
+                            <div className="col-md-6 mt-5">
                                     <h1>{strTeam}</h1>
                                     <p><FontAwesomeIcon icon={faMapMarker} /> Founded: {intFormedYear}</p>
                                     <p><FontAwesomeIcon icon={faFlag} /> Country: {strCountry}</p>
                                     <p><FontAwesomeIcon icon={faFutbol} /> Sport Type: {strSport}</p>
-                                    <p><FontAwesomeIcon icon={faMars} /> Gender: {strGender}</p>
-                                </div>
+                                    <p><FontAwesomeIcon icon={faMars} /> Gender: {strGender}</p>   
                             </div>
 
                             <div className="col-md-6">
@@ -70,10 +68,10 @@ const TeamDetail = () => {
                             </div>
 
                         <div className="link-button">
-                            <img src={fbIcon} alt=""/>
-                            <img src={twIcon} alt=""/>
-                            <img src={ytIcon} alt=""/>
-                    </div>
+                            <a href={`https://${strFacebook}`}><img src={fbIcon} alt=""/> </a>
+                            <a href={`https://${strTwitter}`}><img src={twIcon} alt=""/> </a>
+                            <a href={`https://${strYoutube}`}><img src={ytIcon} alt=""/> </a>
+                        </div>
                     </div>
             </div>
         </>

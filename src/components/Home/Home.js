@@ -24,17 +24,16 @@ const Home = () => {
          <>
             <div style={background}>
                 <h1 className="heading">World Sports Lover </h1>
-        </div>
-
-        <div className="bg-dark">
-        <div className="container text-center">
-            <div className="row">
+           </div>
+    
+        <div className="container bg-dark ">
+            <h1 className="text-center bg-light rounded-pill border-bottom">Premier leagues</h1>
+            <div className="row justify-content-center">
                 {
                     team.map(team => <SingleTeam team={team}></SingleTeam>)
                 }
             </div>
         </div>
-    </div>
     </>
     );
 };
